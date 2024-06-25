@@ -1,0 +1,16 @@
+﻿@model WebApplication7.Models.Property
+
+@{
+    ViewData["Title"] = "Property Details";
+}
+
+<h1>@Model.Address</h1>
+<img src="@Model.ImageUrl" alt="Property image" class="img-fluid" />
+<p><strong>Type:</strong> @Model.Type</p>
+<p><strong>Price:</strong> @Model.Price.ToString("C")</p>
+<p><strong>Status:</strong> @Model.Status</p>
+<p><strong>Description:</strong> @Model.Description</p>
+<p><strong>Contact Number:</strong> @Model.ContactNumber</p>
+<p><strong>Owner:</strong> @Model.OwnerUser.FirstName @Model.OwnerUser.LastName</p>
+
+<a asp-action="Index" asp-controller="Home" class="btn btn-primary">Back to Home</a>
